@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <div>
             <Navbar />
-            <div className='mx-10'>
+            <div className='mx-10 mb-16'>
                 <HeroSection />
                 <CategoryCarousel />
                 <LatestJobs />

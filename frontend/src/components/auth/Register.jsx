@@ -79,7 +79,7 @@ function Register() {
 				<div className="w-full bg-grey-lightest" >
 					<div className="container mx-auto py-8">
 						<div className="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow ">
-							<div className="py-4 px-8 text-purple-400 text-center font-extrabold text-xl border-b border-grey-lighter">
+							<div className="py-4 px-8 text-purple-500 text-center font-extrabold text-xl border-b border-grey-lighter">
 								REGISTER
 							</div>
 							{
@@ -206,7 +206,7 @@ function Register() {
 											accept='image/*'
 										/>
 									</div>
-									<div className="flex items-center justify-between mt-4">
+									<div className="flex items-center justify-center mt-5">
 										{
 											loading 
 											? <button className='bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full flex'>
@@ -222,10 +222,10 @@ function Register() {
 									</div>
 								</div>
 							</form>
+							<p className="text-center pb-6">
+								Already have an account <Link className="text-purple-500 font-bold py-2 px-1 rounded-full" to="/login">Login</Link>
+							</p>
 						</div>
-						<p className="text-center my-4">
-							Already have an account <Link className="text-purple-400 font-bold py-2 px-1 rounded-full" to="/login">Login</Link>
-						</p>
 					</div>
 				</div>
 			</div>

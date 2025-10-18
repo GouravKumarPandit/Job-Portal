@@ -55,14 +55,14 @@ function Login() {
 	}
 
 	return (
-		<>
+		<div className="bg-purple-100">
 			<Navbar />
 			<div className="font-sans antialiased bg-purple-100">
-				<div className="w-full bg-grey-lightest">
+				<div className="w-full bg-grey-lightest mb-10">
 					<form onSubmit={submitHandler}>
-						<div className="container mx-auto py-8">
+						<div className="container mx-auto py-10">
 							<div className="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow ">
-								<div className="py-4 px-8 text-purple-400 text-center font-extrabold text-xl border-b border-grey-lighter">
+								<div className="py-4 px-8 text-purple-500 text-center font-extrabold text-xl border-b border-grey-lighter">
 									LOGIN
 								</div>
 								{
@@ -87,6 +87,7 @@ function Login() {
 											placeholder="Your email address"
 											value={input.email}
 											onChange={changeEventHandler}
+											required
 										/>
 									</div>
 									<div className="mb-4">
@@ -104,6 +105,7 @@ function Login() {
 											placeholder="Your secure password"
 											value={input.password}
 											onChange={changeEventHandler}
+											required
 										/>
 										<p className="text-grey text-xs mt-1">At least 6 characters</p>
 									</div>
@@ -132,31 +134,31 @@ function Login() {
 											onChange={changeEventHandler}
 										/> Recruiter
 									</div>
-									<div className="flex items-center justify-between mt-4">
+									<div className="flex items-center justify-center mt-4">
 										{
 											loading 
-											? <button className='bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full flex'>
+											? <button className='bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full flex'>
 													Login... 
 													<div className="w-6 h-6 ms-3 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
 												</button>
 											: <button
-												className="bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full"
+												className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full"
 												type="submit"
 												onClick="">Login
 											</button>
 										}
 									</div>
+									<p className="text-center my-4">
+										Don't have an account <Link className="text-purple-500 font-bold py-2 px-1 rounded-full" to="/register">Sign Up</Link>
+									</p>
 								</div>
 							</div>
-							<p className="text-center my-4">
-								Don't have an account <Link className="text-purple-400 font-bold py-2 px-1 rounded-full" to="/register">Sign Up</Link>
-							</p>
 						</div>
 					</form>
 				</div>
 			</div>
 			<Footer />
-		</>
+		</div>
 	)
 }
 

@@ -5,12 +5,12 @@ import { FaSearch } from "react-icons/fa";
 function Footer() {
     return (
         <>
-            <footer className="px-6 py-2 bg-gray-800 text-gray-100">
+            <footer className="px-6 py-3 bg-gray-800 text-gray-100">
                 <div className="flex flex-col justify-between items-center container mx-auto md:flex-row">
                     <a href="#" className="text-2xl font-bold text-purple-400">
                         <Link to={'/'} className='flex items-center gap-2'>NAUKRI <FaSearch /> SEARCH</Link>
                     </a>
-                    <p className="mt-2 md:mt-0">All rights reserved 2025.</p>
+                    <p className="mt-2 md:mt-0">© 2025 Naukari Job Portal. Created for learning and portfolio purposes.</p>
                     <div className="flex -mx-2 mt-4 mb-2 md:mt-0 md:mb-0">
                         <a href="#" className="mx-2 text-gray-100 hover:text-gray-400">
                             <svg viewBox="0 0 512 512" className="h-4 w-4 fill-current">

@@ -46,14 +46,14 @@ const Job = ({job}) => {
                 <p className='text-small text-gray-600'>{job?.description}</p>
             </div>
 
-            <div className='flex items-center gap-2 mt-4'>
-                <span className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
+            <div className='flex items-center gap-2 mt-4 flex-wrap'>
+                <span className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full text-nowrap">
                     {job?.position} Position
                 </span>
-                <span className="bg-purple-100 ms-2 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
+                <span className="bg-purple-100 ms-2 text-purple-800 text-sm font-medium px-3 py-1 rounded-full text-nowrap">
                     {job?.jobType}
                 </span>
-                <span className="bg-purple-100 ms-2 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
+                <span className="bg-purple-100 ms-2 text-purple-800 text-sm font-medium px-3 py-1 rounded-full text-nowrap">
                     {job?.salary} LPA
                 </span>
             </div>

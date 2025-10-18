@@ -5,10 +5,17 @@ const LatestJobCards = ({job}) => {
     const navigate = useNavigate();
 
     return (
-        <div onClick={(() => navigate(`/description/${job?._id}`))} className='p-5 rounded-md shadow-xl border border-gray-100 cursor-pointer'>
+        <div onClick={(() => navigate(`/description/${job?._id}`))} className='p-5 rounded-md shadow-xl border border-gray-200 cursor-pointer'>
             <div>
-                <h1 className='font-medium text-lg'>{job?.company?.name}</h1>
-                <p className='text-sm text-gray-500'>{job?.location}</p>
+                <h1 className='font-medium text-lg flex items-center'>
+                    <img
+                        src={job?.company?.logo ? job?.company?.logo : 'https://www.shutterstock.com/image-vector/circle-line-simple-design-logo-600nw-2174926871.jpg'}
+                        alt="Company Logo"
+                        className="w-10 h-10 rounded-full me-2"
+                    />
+                    {job?.company?.name}
+                </h1>
+                <p className='text-sm text-gray-500 '>{job?.location}</p>
             </div>
             <div>
                 <h1 className='font-bold text-lg my-2'>{job?.title}</h1>

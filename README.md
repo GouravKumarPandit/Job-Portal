@@ -46,20 +46,35 @@ This portal provides **two separate dashboards** for **Students** and **Recruite
 
 ## 🖼️ Screenshots
 
-### 🔹 Landing Page
-![Landing Page](./screenshots/landing.png)
+### 🔹 Login Page
+![Landing Page](./screenshots/login.png)
 
-### 🔹 Student Dashboard
-![Student Dashboard](./screenshots/student-dashboard.png)
+### 🔹 Register Page
+![Landing Page](./screenshots/register.png)
 
-### 🔹 Recruiter Dashboard
-![Recruiter Dashboard](./screenshots/recruiter-dashboard.png)
+### 🔹 Home Page
+![Landing Page](./screenshots/home.png)
 
-### 🔹 Job Details
-![Job Details](./screenshots/job-details.png)
+### 🔹 Jobs Page
+![Student Dashboard](./screenshots/jobs.png)
 
-### 🔹 Application Status
-![Application Status](./screenshots/application-status.png)
+### 🔹 Browse Page
+![Student Dashboard](./screenshots/browse.png)
+
+### 🔹 Student Profile
+![Student Dashboard](./screenshots/student_profile.png)
+
+### 🔹 Student Job Apply
+![Student Dashboard](./screenshots/student_apply_job.png)
+
+### 🔹 Recruiter Company Page
+![Recruiter Dashboard](./screenshots/recruiter_company.png)
+
+### 🔹 Recruiter Applicants Page
+![Recruiter Dashboard](./screenshots/recruiter_company.png)
+
+### 🔹 Recruiter Job Page
+![Recruiter Dashboard](./screenshots/recruiter_job.png)
 
 ---
 
@@ -156,5 +171,5 @@ Feel free to fork this repo and submit a pull request.
 ## 🧑‍💻 Author
 
 **Gourav Kumar Pandit**  
-🔗 [GitHub](https://github.com/yourusername)  
-💼 [LinkedIn](https://www.linkedin.com/in/your-linkedin-id)
+🔗 [GitHub](https://github.com/GouravKumarPandit)  
+💼 [LinkedIn](https://www.linkedin.com/in/gourav-kumar-pandit-533334218/)

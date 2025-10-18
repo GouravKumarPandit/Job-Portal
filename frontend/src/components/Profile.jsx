@@ -20,7 +20,7 @@ function Profile() {
     return (
         <div>
             <Navbar />
-            <div className='max-w-7xl mx-8 bg-white border border-gray-200 rounded-2xl my-5 p-8'>
+            <div className='max-w-7xl mx-auto mt-10 bg-white border border-gray-200 rounded-2xl my-5 p-8'>
                 <div className='flex justify-between'>
                     <div className='flex items-center gap-4'>
                         <button className='bg-gray-200 text-purple-500 py-3 px-3 rounded cursor-pointer'>
@@ -75,7 +75,7 @@ function Profile() {
                 </div>
 
             </div>
-            <div className='max-w-4xl mx-8 mt-5 mb-8 bg-white rounded-2xl'>
+            <div className='max-w-4xl mx-auto mt-5 mb-8 bg-white rounded-2xl mb-10'>
                 <h1 className='text-medium font-bold mb-3'>Applied Jobs</h1>
                 <AppliedJobTable />
             </div>

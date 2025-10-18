@@ -22,8 +22,15 @@ function AppliedJobTable() {
                             allAppliedJobs.map((appliedJob, index) => (
                                 <tr className="hover:bg-gray-50 transition" key={appliedJob?._id}>
                                     <td className="py-3 px-6 text-gray-800">{appliedJob?.createdAt?.split("T")[0]}</td>
-                                    <td className="py-3 px-6 text-gray-600">{appliedJob?.job?.title}</td>
-                                    <td className="py-3 px-6 text-gray-600">{appliedJob?.job?.company?.name}</td>
+                                    <td className="py-3 px-6 text-gray-600 font-bold">{appliedJob?.job?.title}</td>
+                                    <td className="py-3 px-6 text-gray-600 flex items-center">
+                                        <img
+                                            src={appliedJob?.job?.company?.logo ? appliedJob?.job?.company?.logo : 'https://www.shutterstock.com/image-vector/circle-line-simple-design-logo-600nw-2174926871.jpg'}
+                                            alt="Company Logo"
+                                            className="w-10 h-10 rounded-full me-2"
+                                        />
+                                        <span>{appliedJob?.job?.company?.name}</span>
+                                    </td>
                                     <td className="py-3 px-6">
                                         <span className={`px-3 py-1 text-xs font-medium rounded-full capitalize
                                             ${
