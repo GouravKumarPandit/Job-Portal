@@ -12,7 +12,9 @@ import Companies from './components/admin/Companies.jsx'
 import CompanySetup from './components/admin/CompanySetup.jsx'
 import AdminJobs from './components/admin/AdminJobs.jsx'
 import AddJob from './components/admin/AddJob.jsx'
-import Applicants from './components/admin/Applicants.jsx'
+import Applicants from './components/admin/Applicants.jsx';
+import { useSelector } from 'react-redux'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 const appRouter = createBrowserRouter([
 	{
@@ -41,28 +43,40 @@ const appRouter = createBrowserRouter([
 	},
 	{
 		path: '/profile',
-		element: <Profile />
+		element: <ProtectedRoute>
+					<Profile />
+				</ProtectedRoute>
 	},
 	// ADMIN ROUTES 
 	{
 		path: '/admin/companies',
-		element: <Companies />
+		element: <ProtectedRoute allowedRoles={["recruiter", "admin"]}>
+					<Companies />
+				</ProtectedRoute>
 	},
 	{
 		path: '/admin/companies/:id',
-		element: <CompanySetup />
+		element: <ProtectedRoute allowedRoles={["recruiter", "admin"]}>
+					<CompanySetup />
+				</ProtectedRoute>
 	},
 	{
 		path: '/admin/jobs',
-		element: <AdminJobs />
+		element: <ProtectedRoute allowedRoles={["recruiter", "admin"]}>
+					<AdminJobs />
+				</ProtectedRoute>
 	},
 	{
 		path: '/admin/jobs/create',
-		element: <AddJob />
+		element: <ProtectedRoute allowedRoles={["recruiter", "admin"]}>
+					<AddJob />
+				</ProtectedRoute>
 	},
 	{
 		path: '/admin/jobs/:id/applicants',
-		element: <Applicants />
+		element: <ProtectedRoute allowedRoles={["recruiter", "admin"]}>
+					<Applicants />
+				</ProtectedRoute>
 	}
 ]);
 

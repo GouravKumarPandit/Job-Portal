@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './shared/NavBar'
 import Footer from './shared/Footer'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSingleJob } from '../redux/jobSlice';
@@ -21,6 +21,7 @@ function JobDescription() {
     const { user } = useSelector(store => store.auth);
     const applied = singleJob?.application?.some(application => application.applicant === user?._id) || false;
     const [isApplied, setIsApplied] = useState(applied);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchSingleJob = async () => {
@@ -44,6 +45,11 @@ function JobDescription() {
     const handleApplyJob = async () => {
         console.log("Handle Apply Job....")
         try {
+            if(!user){
+                console.log("FRONTEND ERROR: User not logged in.");
+                navigate("/login");
+            }
+
             const res = await axios.get(`${APPLICATIONS_API_ENDPOINT}/apply/${jobId}`, {
                 withCredentials: true
             });
@@ -71,7 +77,7 @@ function JobDescription() {
     return (
         <div>
             <Navbar />
-            <div className='max-w-7xl mx-8 my-10'>
+            <div className='max-w-7xl mx-8 my-10 shadow shadow-xl px-8 py-6 border border-gray-100'>
                 <div className="flex items-center justify-between">
                     <div>
                         {
@@ -93,7 +99,7 @@ function JobDescription() {
                             </span>
                         </div>
                     </div>
-
+                    
                     <div>
                         <button
                             onClick={isApplied ? null : handleApplyJob}
@@ -111,6 +117,7 @@ function JobDescription() {
                 <h1 className='border-b-2 my-5 py-4 border-b-gray-300 font-medium'>Job Description</h1>
                 <div className='my-4'>
                     <h1 className='font-bold my-1'>Role: <span className='pl-4 font-normal text-gray-400'>{singleJob?.title}</span></h1>
+                    {/* <h1 className='font-bold my-1'>Company: <span className='pl-4 font-normal text-gray-400'>{singleJob?.company?.name}</span></h1> */}
                     <h1 className='font-bold my-1'>Location: <span className='pl-4 font-normal text-gray-400'>{singleJob?.location}</span></h1>
                     <h1 className='font-bold my-1'>Description: <span className='pl-4 font-normal text-gray-400'>{singleJob?.description}</span></h1>
                     <h1 className='font-bold my-1'>Experience: <span className='pl-4 font-normal text-gray-400'>{singleJob?.experienceLevel} yrs</span></h1>

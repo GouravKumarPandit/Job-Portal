@@ -52,7 +52,7 @@ function Navbar() {
                                     <Link to='/admin/jobs'>Jobs</Link>
                                 </li>
                             </ul>)
-                            : (<ul className="pt-4 text-base mb-2 text-white md:flex md:justify-between  md:pt-0">
+                            : (<ul className="pt-4 text-base mb-2 text-white md:flex md:justify-between md:pt-0">
                                 <li className='me-8 text-purple-400 hover:underline'>
                                     <Link to='/'>Home</Link>
                                 </li>
