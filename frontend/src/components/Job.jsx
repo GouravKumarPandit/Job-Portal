@@ -26,7 +26,9 @@ const Job = ({job}) => {
                     <CiBookmark />
                 </button>
             </div>
-            <div className="flex items-center gap-2 my-2">
+            <div className={`my-2 gap-3 ${
+                                job?.company?.logo ? "grid grid-cols-2" : "flex items-center"
+                            }`}>
                 <button className='bg-gray-200 text-purple-500 py-3 px-3 rounded cursor-pointer'>
                     {
                         job?.company?.logo ? 
@@ -59,7 +61,7 @@ const Job = ({job}) => {
             </div>
 
             <div className='flex items-center gap-4 mt-5'>
-                <button onClick={() => navigate(`/description/${jobId}`) } className='bg-white border flex border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white py-1 px-2 rounded hover:bg-purple-700 cursor-pointer'>
+                <button onClick={() => navigate(`/description/${jobId}`) } className='bg-white border flex border-purple-500 text-purple-500 hover:bg-purple-600 hover:text-white py-1 px-2 rounded hover:bg-purple-700 cursor-pointer'>
                     Details <span className='mt-1.5 ms-2'><FaEye /></span>
                 </button>
                 <button className='bg-purple-500 border border-purple-500 text-white hover:bg-white hover:text-purple-500 py-1 px-2 rounded hover:bg-purple-700 cursor-pointer'>

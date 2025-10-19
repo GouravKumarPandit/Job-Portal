@@ -6,7 +6,7 @@ const LatestJobCards = ({job}) => {
 
     return (
         <div onClick={(() => navigate(`/description/${job?._id}`))} className='p-5 rounded-md shadow-xl border border-gray-200 cursor-pointer'>
-            <div>
+            <div className=''>
                 <h1 className='font-medium text-lg flex items-center'>
                     <img
                         src={job?.company?.logo ? job?.company?.logo : 'https://www.shutterstock.com/image-vector/circle-line-simple-design-logo-600nw-2174926871.jpg'}

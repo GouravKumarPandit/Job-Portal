@@ -13,7 +13,6 @@ import CompanySetup from './components/admin/CompanySetup.jsx'
 import AdminJobs from './components/admin/AdminJobs.jsx'
 import AddJob from './components/admin/AddJob.jsx'
 import Applicants from './components/admin/Applicants.jsx';
-import { useSelector } from 'react-redux'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 const appRouter = createBrowserRouter([

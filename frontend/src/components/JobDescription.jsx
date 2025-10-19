@@ -105,7 +105,7 @@ function JobDescription() {
                             onClick={isApplied ? null : handleApplyJob}
                             className={`py-1 px-3 rounded border
                             ${isApplied ? 'bg-gray-500 flex border-white text-white cursor-not-allowed' 
-                            : 'bg-white border cursor-pointer flex border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white hover:bg-purple-700'}`}>
+                            : 'bg-white border cursor-pointer flex border-purple-500 text-purple-500 hover:bg-purple-600 hover:text-white hover:bg-purple-700'}`}>
                             {
                                 isApplied ? 
                                 "Applied" : "Apply Now"

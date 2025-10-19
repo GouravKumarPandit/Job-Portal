@@ -209,12 +209,12 @@ function Register() {
 									<div className="flex items-center justify-center mt-5">
 										{
 											loading 
-											? <button className='bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full flex'>
+											? <button className='bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full flex'>
 													Signup... 
 													<div className="w-6 h-6 ms-3 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
 												</button>
 											: <button
-												className="bg-purple-400 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full"
+												className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full"
 												type="submit"
 												onClick="">Sign Up
 											</button>
